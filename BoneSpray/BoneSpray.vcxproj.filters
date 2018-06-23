@@ -63,12 +63,18 @@
     <ClInclude Include="jack\weakmacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="jackinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BoneSpray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jackinterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
