@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "bonespraygraphics.h"
-
+#include "bonegl_render_model.h"
 #include "sload.h"
 #include <iostream>
 #include "GL/glew.h"
@@ -9,16 +9,36 @@
 namespace bonegl
 {
 	// The program containing our shader registrations
+	rm::RenderModels* models;
 	GLuint program;
 
 	void render(void)
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(0.0, 0.0, 0.0, 1.0);
+		glBindVertexArray(models -> GetModel("triangle"));
 		glUseProgram(program);
 
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glutSwapBuffers();
+	}
+
+	/*
+	 *	Called on finish of loop, return to main prog
+	 */
+	int close()
+	{
+		delete models;
+		glDeleteProgram(program);
+		return 0;
+	}
+
+	/*
+	 *	Called on loop exit
+	 */
+	void closeCallback()
+	{
+		glutLeaveMainLoop();
 	}
 
 	/*
@@ -27,6 +47,7 @@ namespace bonegl
 	int registerListeners()
 	{
 		glutDisplayFunc(render);
+		glutCloseFunc(closeCallback);
 
 		return 0;
 	}
@@ -46,6 +67,12 @@ namespace bonegl
 		return 0;
 	}
 
+	void loadAndBindModels()
+	{
+		models = new rm::RenderModels();
+		models -> CreateTriangleModel("triangle");
+	}
+
 	/*
 	 *	Initalise GLUT and GLEW, spawning our window and using our config.
 	 */
@@ -55,7 +82,8 @@ namespace bonegl
 		const int GL_WINDOW_W = 500;
 		const int GL_WINDOW_H = 500;
 		const char* WINDOW_NAME = "Bone Spray";
-		const bool DISPLAY_FULL_SCREEN = true;
+		const bool DISPLAY_FULL_SCREEN = false;
+
 
 		// Launch GLUT + window
 		glutInit(&argc, argv);
@@ -65,6 +93,9 @@ namespace bonegl
 		glEnable(GL_DEPTH_TEST);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		glewInit();
+
+		// Load models
+		loadAndBindModels();
 
 		if (DISPLAY_FULL_SCREEN) glutFullScreen();
 	}
@@ -79,6 +110,6 @@ namespace bonegl
 		registerListeners();
 		glutMainLoop();
 
-		return 0;
+		return close();
 	}
 }

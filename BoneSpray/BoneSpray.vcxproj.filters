@@ -75,6 +75,12 @@
     <ClInclude Include="includes\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bonegl_render_model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl_models.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -99,6 +105,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bonegl_render_model.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

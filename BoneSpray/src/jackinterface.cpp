@@ -6,28 +6,29 @@
 namespace jint
 {
 	jack_port_t *in_port;
-
 	jack_client_t *client;
 
-	int process(jack_nframes_t nframes, void *arg) {
-		jack_default_audio_sample_t *in;
-		int i;
-
-		in = (jack_default_audio_sample_t *) jack_port_get_buffer(in_port, nframes);
-		
-		for (i = 0; i < nframes; i++)
-		{
-			// process
-		}
-
+	/*
+	 *	Callback process for JACK events - handles the audio data incoming
+	 */
+	int process(jack_nframes_t nframes, void *arg)
+	{
+		jack_default_audio_sample_t *audio_in;
+		audio_in = (jack_default_audio_sample_t *) jack_port_get_buffer(in_port, nframes);
 		return 0;
 	}
 
+	/*
+	 *	Callback process for JACK closing
+	 */
 	void shutdown(void *arg)
 	{
 		exit(1);
 	}
 
+	/*
+	 *	Setup process for JACK. Launch the server, open the channel, etc.
+	 */
 	void activate()
 	{
 		const char *CLIENT_NAME = "BS";
@@ -45,6 +46,9 @@ namespace jint
 		int activate = jack_activate(client);
 	}
 
+	/*
+	 *	Close the JACK server before exiting the app.
+	 */
 	void close()
 	{
 		jack_client_close(client);
