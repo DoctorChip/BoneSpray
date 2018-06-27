@@ -4,6 +4,7 @@
 #include "frame_buffer_info.h"
 #include "window_info.h"
 #include "init_glew.h"
+#include "bonegl/core/bonegl_i_listener.h"
 #include <iostream>
 
 namespace core
@@ -25,7 +26,14 @@ namespace core
 
 		static void print_info(const core::window_info& windowInfo, const core::context_info& context);
 
+		static void set_listener(core::i_listener*& listener);
+
 	private:
+
+		static core::i_listener* listener;
+
+		static core::window_info window_info;
+
 		static void idle_callback(void);
 
 		static void display_callback(void);

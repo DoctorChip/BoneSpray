@@ -3,10 +3,15 @@
 
 using namespace core;
 
-void init_glut::init(const core::window_info& windowInfo, const core::context_info& context_info, const core::frame_buffer_info& frame_buffer_info)
+core::i_listener* init_glut::listener = NULL;
+core::window_info init_glut::window_info;
+
+void init_glut::init(const core::window_info& window_info_, const core::context_info& context_info, const core::frame_buffer_info& frame_buffer_info)
 {
 	int fakeargc = 1;
 	char *fakeargv[] = { (char*)"fake", NULL };
+	window_info = window_info_;
+
 	glutInit(&fakeargc, fakeargv);
 
 	if (context_info.core)
@@ -20,10 +25,10 @@ void init_glut::init(const core::window_info& windowInfo, const core::context_in
 	}
 
 	glutInitDisplayMode(frame_buffer_info.flags);
-	glutInitWindowPosition(windowInfo.position_x, windowInfo.position_y);
-	glutInitWindowSize(windowInfo.width, windowInfo.height);
+	glutInitWindowPosition(window_info.position_x, window_info.position_y);
+	glutInitWindowSize(window_info.width, window_info.height);
 
-	glutCreateWindow(windowInfo.name);
+	glutCreateWindow(window_info.name);
 	std::cout << "GLUT:initialized" << std::endl;
 
 	glutIdleFunc(idle_callback);
@@ -34,7 +39,7 @@ void init_glut::init(const core::window_info& windowInfo, const core::context_in
 	init_glew::init();
 
 	glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-	print_info(windowInfo, context_info);
+	print_info(window_info, context_info);
 
 }
 
@@ -58,14 +63,34 @@ void init_glut::idle_callback(void)
 
 void init_glut::display_callback()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glClearColor(0.0, 0.0, 0.0, 1);
-	glutSwapBuffers();
+	if (listener)
+	{
+		listener -> notify_begin_frame();
+		listener ->notify_display_frame();
+
+		glutSwapBuffers();
+
+		listener ->notify_end_frame();
+	}
 }
 
 void init_glut::reshape_callback(int width, int height)
 {
+	if (window_info.is_reshapable == true)
+	{
+		if (listener)
+		{
+			listener -> notify_reshape(width, height, window_info.width, window_info.height);
+		}
 
+		window_info.width = width;
+		window_info.height = height;
+	}
+}
+
+void init_glut::set_listener(core::i_listener*& listener_)
+{
+	listener = listener_;
 }
 
 void init_glut::close_callback()

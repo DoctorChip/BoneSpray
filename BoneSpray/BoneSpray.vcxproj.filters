@@ -43,6 +43,18 @@
     <Filter Include="Source Files\bonegl\core">
       <UniqueIdentifier>{fc81ca80-8675-4806-afe6-2f437136deaf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\bonegl\rendering">
+      <UniqueIdentifier>{70f0c492-fc2d-4ac2-9fad-f737104338bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bonegl\rendering\models">
+      <UniqueIdentifier>{d3a2b957-5990-4fbf-9c19-a3bc0b2eb580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bonegl\rendering">
+      <UniqueIdentifier>{734ea4c9-ad4a-4957-a8ea-8a1c52c6f9ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bonegl\rendering\models">
+      <UniqueIdentifier>{a45f8814-8c0d-43d5-8415-079a4475f5e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes\stdafx.h">
@@ -108,17 +120,32 @@
     <ClInclude Include="includes\bonegl\init\window_info.h">
       <Filter>Header Files\bonegl\init</Filter>
     </ClInclude>
-    <ClInclude Include="includes\bonegl\core\bonegl_models.h">
-      <Filter>Header Files\bonegl\core</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\core\bonegl_render_model.h">
-      <Filter>Header Files\bonegl\core</Filter>
-    </ClInclude>
     <ClInclude Include="includes\bonegl\core\bonegl_shader_manager.h">
       <Filter>Header Files\bonegl\core</Filter>
     </ClInclude>
     <ClInclude Include="includes\jack\jack_interface.h">
       <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\core\bonegl_i_listener.h">
+      <Filter>Header Files\bonegl\core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\core\bonegl_scene_manager.h">
+      <Filter>Header Files\bonegl\core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\rendering\vertex_format.h">
+      <Filter>Header Files\bonegl\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\rendering\render_object.h">
+      <Filter>Header Files\bonegl\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\rendering\models\model.h">
+      <Filter>Header Files\bonegl\rendering\models</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\rendering\models\triangle.h">
+      <Filter>Header Files\bonegl\rendering\models</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\core\bonegl_model_manager.h">
+      <Filter>Header Files\bonegl\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,29 +164,29 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\bonegl\init\context_info.cpp">
-      <Filter>Source Files\bonegl\init</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\init\frame_buffer_info.cpp">
-      <Filter>Source Files\bonegl\init</Filter>
-    </ClCompile>
     <ClCompile Include="src\bonegl\init\init_glew.cpp">
       <Filter>Source Files\bonegl\init</Filter>
     </ClCompile>
     <ClCompile Include="src\bonegl\init\inut_glut.cpp">
       <Filter>Source Files\bonegl\init</Filter>
     </ClCompile>
-    <ClCompile Include="src\bonegl\init\window_info.cpp">
-      <Filter>Source Files\bonegl\init</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\core\bonegl_render_model.cpp">
-      <Filter>Source Files\bonegl\core</Filter>
-    </ClCompile>
     <ClCompile Include="src\bonegl\core\bonegl_shader_manager.cpp">
       <Filter>Source Files\bonegl\core</Filter>
     </ClCompile>
     <ClCompile Include="src\jack\jack_interface.cpp">
       <Filter>Source Files\jack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\core\bonegl_scene_manager.cpp">
+      <Filter>Source Files\bonegl\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\rendering\models\model.cpp">
+      <Filter>Source Files\bonegl\rendering\models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\rendering\models\triangle.cpp">
+      <Filter>Source Files\bonegl\rendering\models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\core\bonegl_model_manager.cpp">
+      <Filter>Source Files\bonegl\core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
