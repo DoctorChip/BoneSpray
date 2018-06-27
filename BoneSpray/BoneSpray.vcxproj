@@ -150,11 +150,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="bonegl_render_model.h" />
-    <ClInclude Include="includes\bonegl_models.h" />
-    <ClInclude Include="includes\bonespraygraphics.h" />
-    <ClInclude Include="includes\jackinterface.h" />
-    <ClInclude Include="includes\sload.h" />
+    <ClInclude Include="includes\bonegl\core\bonegl_models.h" />
+    <ClInclude Include="includes\bonegl\core\bonegl_render_model.h" />
+    <ClInclude Include="includes\bonegl\core\bonegl_shader_manager.h" />
+    <ClInclude Include="includes\bonegl\init\context_info.h" />
+    <ClInclude Include="includes\bonegl\init\frame_buffer_info.h" />
+    <ClInclude Include="includes\bonegl\init\init_glew.h" />
+    <ClInclude Include="includes\bonegl\init\inut_glut.h" />
+    <ClInclude Include="includes\bonegl\init\window_info.h" />
+    <ClInclude Include="includes\jack\jack_interface.h" />
     <ClInclude Include="includes\stdafx.h" />
     <ClInclude Include="includes\targetver.h" />
     <ClInclude Include="jack\control.h" />
@@ -178,11 +182,15 @@
     <None Include="shaders\Vertex_Shader.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bonegl_render_model.cpp" />
-    <ClCompile Include="src\BoneSpray.cpp" />
-    <ClCompile Include="src\bonespraygraphics.cpp" />
-    <ClCompile Include="src\jackinterface.cpp" />
-    <ClCompile Include="src\sload.cpp" />
+    <ClCompile Include="src\bonegl\core\bonegl_render_model.cpp" />
+    <ClCompile Include="src\bonegl\core\bonegl_shader_manager.cpp" />
+    <ClCompile Include="src\bonegl\init\context_info.cpp" />
+    <ClCompile Include="src\bonegl\init\frame_buffer_info.cpp" />
+    <ClCompile Include="src\bonegl\init\init_glew.cpp" />
+    <ClCompile Include="src\bonegl\init\inut_glut.cpp" />
+    <ClCompile Include="src\bonegl\init\window_info.cpp" />
+    <ClCompile Include="src\jack\jack_interface.cpp" />
+    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

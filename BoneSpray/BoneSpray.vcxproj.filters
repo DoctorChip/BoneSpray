@@ -16,70 +16,109 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{bd2386e7-b2eb-4c1f-829b-edc3bb88f528}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\bonegl">
+      <UniqueIdentifier>{9565c770-a242-4ea1-891b-c4812d5924ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jack">
+      <UniqueIdentifier>{ad2d243d-b7ba-4fc9-83ec-c31097b34272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jack">
+      <UniqueIdentifier>{7bf0acef-da2c-416d-a445-3f560421dded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bonegl">
+      <UniqueIdentifier>{97dec6a8-ca36-466d-8123-c2a5b988b999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sys">
+      <UniqueIdentifier>{9dcea2a2-83bf-4e43-86f2-48696ec6455f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bonegl\core">
+      <UniqueIdentifier>{34b4ee18-8390-4412-ab16-0b8fd2e3f442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bonegl\init">
+      <UniqueIdentifier>{a2cbb141-8efe-44aa-bcb0-83e8aa49dd51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bonegl\init">
+      <UniqueIdentifier>{d713dbb2-4ae1-4db3-a3af-56af317c813c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bonegl\core">
+      <UniqueIdentifier>{fc81ca80-8675-4806-afe6-2f437136deaf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="jack\control.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\intclient.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\jack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\jslist.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\midiport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\ringbuffer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\session.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\statistics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\systemdeps.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\thread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\transport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\weakjack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="jack\weakmacros.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonespraygraphics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\jackinterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\sload.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="includes\stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="jack\jack.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\weakmacros.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\weakjack.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\types.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\thread.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\transport.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
     <ClInclude Include="includes\targetver.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\jack</Filter>
     </ClInclude>
-    <ClInclude Include="bonegl_render_model.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="jack\systemdeps.h">
+      <Filter>Header Files\jack</Filter>
     </ClInclude>
-    <ClInclude Include="includes\bonegl_models.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="jack\statistics.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\session.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\ringbuffer.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\midiport.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\jslist.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\intclient.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="jack\control.h">
+      <Filter>Header Files\jack</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\init\context_info.h">
+      <Filter>Header Files\bonegl\init</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\init\frame_buffer_info.h">
+      <Filter>Header Files\bonegl\init</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\init\init_glew.h">
+      <Filter>Header Files\bonegl\init</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\init\inut_glut.h">
+      <Filter>Header Files\bonegl\init</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\init\window_info.h">
+      <Filter>Header Files\bonegl\init</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\core\bonegl_models.h">
+      <Filter>Header Files\bonegl\core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\core\bonegl_render_model.h">
+      <Filter>Header Files\bonegl\core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\bonegl\core\bonegl_shader_manager.h">
+      <Filter>Header Files\bonegl\core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\jack\jack_interface.h">
+      <Filter>Header Files\jack</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -92,23 +131,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\BoneSpray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonespraygraphics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jackinterface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sload.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\stdafx.cpp">
+      <Filter>Source Files\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bonegl_render_model.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\bonegl\init\context_info.cpp">
+      <Filter>Source Files\bonegl\init</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\init\frame_buffer_info.cpp">
+      <Filter>Source Files\bonegl\init</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\init\init_glew.cpp">
+      <Filter>Source Files\bonegl\init</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\init\inut_glut.cpp">
+      <Filter>Source Files\bonegl\init</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\init\window_info.cpp">
+      <Filter>Source Files\bonegl\init</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\core\bonegl_render_model.cpp">
+      <Filter>Source Files\bonegl\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\core\bonegl_shader_manager.cpp">
+      <Filter>Source Files\bonegl\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jack\jack_interface.cpp">
+      <Filter>Source Files\jack</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

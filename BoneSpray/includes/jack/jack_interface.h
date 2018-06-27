@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 
-namespace jint
+namespace jack 
 {
 	void activate();
 

@@ -2,8 +2,9 @@
 #include "stdafx.h"
 #include "jack/jack.h"
 #include "jack/types.h"
+#include "jack/jack_interface.h"
 
-namespace jint
+namespace jack 
 {
 	jack_port_t *in_port;
 	jack_client_t *client;

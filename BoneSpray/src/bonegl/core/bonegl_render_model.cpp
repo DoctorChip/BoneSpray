@@ -1,7 +1,7 @@
 
 #include "stdafx.h"
-#include "bonegl_render_model.h"
-#include "bonegl_models.h"
+#include "bonegl/core/bonegl_render_model.h"
+#include "bonegl/core/bonegl_models.h"
 using namespace rm;
 
 RenderModels::RenderModels()
