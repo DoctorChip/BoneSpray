@@ -10,6 +10,11 @@ models_manager::models_manager()
 	triangle -> set_program(shader_manager::get_shader("colorShader"));
 	triangle -> create();
 	model_list["triangle"] = triangle;
+
+	models::quad* quad = new models::quad();
+	quad -> set_program(shader_manager::get_shader("colorShader"));
+	quad ->create();
+	model_list["quad"] = quad;
 }
 
 models_manager::~models_manager()

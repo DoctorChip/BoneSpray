@@ -6,19 +6,19 @@ namespace rendering
 {
 	namespace models
 	{
-		class triangle : public model
+		class quad : public models::model
 		{
 
 		public:
-			triangle();
+			quad();
 
-			~triangle();
+			~quad();
 
 			void create();
 
-			virtual void update() override final;
-
 			virtual void draw() override final;
+
+			virtual void update() override final;
 		};
 	}
 }

@@ -4,6 +4,7 @@
 #include "bonegl_shader_manager.h"
 #include "bonegl/rendering/render_object.h"
 #include "bonegl/rendering/models/triangle.h"
+#include "bonegl/rendering/models/quad.h"
 
 using namespace rendering;
 

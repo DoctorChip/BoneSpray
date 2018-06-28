@@ -147,6 +147,9 @@
     <ClInclude Include="includes\bonegl\core\bonegl_model_manager.h">
       <Filter>Header Files\bonegl\core</Filter>
     </ClInclude>
+    <ClInclude Include="includes\bonegl\rendering\models\quad.h">
+      <Filter>Header Files\bonegl\rendering\models</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -187,6 +190,9 @@
     </ClCompile>
     <ClCompile Include="src\bonegl\core\bonegl_model_manager.cpp">
       <Filter>Source Files\bonegl\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bonegl\rendering\models\quad.cpp">
+      <Filter>Source Files\bonegl\rendering\models</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
