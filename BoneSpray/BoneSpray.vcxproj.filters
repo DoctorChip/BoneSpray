@@ -13,47 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Shaders">
-      <UniqueIdentifier>{bd2386e7-b2eb-4c1f-829b-edc3bb88f528}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\bonegl">
-      <UniqueIdentifier>{9565c770-a242-4ea1-891b-c4812d5924ce}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\jack">
       <UniqueIdentifier>{ad2d243d-b7ba-4fc9-83ec-c31097b34272}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\jack">
       <UniqueIdentifier>{7bf0acef-da2c-416d-a445-3f560421dded}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\bonegl">
-      <UniqueIdentifier>{97dec6a8-ca36-466d-8123-c2a5b988b999}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\sys">
       <UniqueIdentifier>{9dcea2a2-83bf-4e43-86f2-48696ec6455f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\bonegl\core">
-      <UniqueIdentifier>{34b4ee18-8390-4412-ab16-0b8fd2e3f442}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\bonegl\init">
-      <UniqueIdentifier>{a2cbb141-8efe-44aa-bcb0-83e8aa49dd51}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\bonegl\init">
-      <UniqueIdentifier>{d713dbb2-4ae1-4db3-a3af-56af317c813c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\bonegl\core">
-      <UniqueIdentifier>{fc81ca80-8675-4806-afe6-2f437136deaf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\bonegl\rendering">
-      <UniqueIdentifier>{70f0c492-fc2d-4ac2-9fad-f737104338bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\bonegl\rendering\models">
-      <UniqueIdentifier>{d3a2b957-5990-4fbf-9c19-a3bc0b2eb580}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\bonegl\rendering">
-      <UniqueIdentifier>{734ea4c9-ad4a-4957-a8ea-8a1c52c6f9ba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\bonegl\rendering\models">
-      <UniqueIdentifier>{a45f8814-8c0d-43d5-8415-079a4475f5e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -105,60 +72,12 @@
     <ClInclude Include="jack\control.h">
       <Filter>Header Files\jack</Filter>
     </ClInclude>
-    <ClInclude Include="includes\bonegl\init\context_info.h">
-      <Filter>Header Files\bonegl\init</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\init\frame_buffer_info.h">
-      <Filter>Header Files\bonegl\init</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\init\init_glew.h">
-      <Filter>Header Files\bonegl\init</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\init\inut_glut.h">
-      <Filter>Header Files\bonegl\init</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\init\window_info.h">
-      <Filter>Header Files\bonegl\init</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\core\bonegl_shader_manager.h">
-      <Filter>Header Files\bonegl\core</Filter>
-    </ClInclude>
     <ClInclude Include="includes\jack\jack_interface.h">
       <Filter>Header Files\jack</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\core\bonegl_i_listener.h">
-      <Filter>Header Files\bonegl\core</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\core\bonegl_scene_manager.h">
-      <Filter>Header Files\bonegl\core</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\rendering\vertex_format.h">
-      <Filter>Header Files\bonegl\rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\rendering\render_object.h">
-      <Filter>Header Files\bonegl\rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\rendering\models\model.h">
-      <Filter>Header Files\bonegl\rendering\models</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\rendering\models\triangle.h">
-      <Filter>Header Files\bonegl\rendering\models</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\core\bonegl_model_manager.h">
-      <Filter>Header Files\bonegl\core</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\bonegl\rendering\models\quad.h">
-      <Filter>Header Files\bonegl\rendering\models</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="shaders\Fragment_Shader.glsl">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\Vertex_Shader.glsl">
-      <Filter>Shaders</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\stdafx.cpp">
@@ -167,32 +86,8 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\bonegl\init\init_glew.cpp">
-      <Filter>Source Files\bonegl\init</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\init\inut_glut.cpp">
-      <Filter>Source Files\bonegl\init</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\core\bonegl_shader_manager.cpp">
-      <Filter>Source Files\bonegl\core</Filter>
-    </ClCompile>
     <ClCompile Include="src\jack\jack_interface.cpp">
       <Filter>Source Files\jack</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\core\bonegl_scene_manager.cpp">
-      <Filter>Source Files\bonegl\core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\rendering\models\model.cpp">
-      <Filter>Source Files\bonegl\rendering\models</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\rendering\models\triangle.cpp">
-      <Filter>Source Files\bonegl\rendering\models</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\core\bonegl_model_manager.cpp">
-      <Filter>Source Files\bonegl\core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bonegl\rendering\models\quad.cpp">
-      <Filter>Source Files\bonegl\rendering\models</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
